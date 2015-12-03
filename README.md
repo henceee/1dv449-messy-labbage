@@ -28,6 +28,12 @@ While on the topic of reducing file size, it is also recommended by Souders to G
 As of now, the application is not extensive, nor will it be burdened with extensive traffic, as it is intended only for internal use, within the company. However, to reduce the load time further one can also use a Content Delivery System (CDN), which means a collection of servers at different location that enable a more efficient delivery of content, based on proximity and response time. Yahoo recomend CDN services provied by companies such as Akamai Technologies, EdgeCast or level3 for cost efficiency[11]. As of now, on its current state, the cost would probably be to great, and bring very little value. The knowlage of how to optimize a site for improved response time when dealing with greater scale, can still be most valuble though.
 
 
+###Cache-Controll
+In order to make sure that the same content is not requested again and again, for each page, one can get controll over the lifetime of the object in the cache, stored in the front-end - thereby reducing the number of requests to the server. This can be achieved by using an Expires header. As long as the expiration-date is in the future, and such a date exists, the browser simply uses an cached version of that resource instead. 
+
+One can also utilize Entity Tags, or ETags, to ensure that the cached version of a resource is valid, and corresponds with the resource located on the server. If the versions match, the server sends a 304 code back, meaning 'Not Modified', telling the server to use the cached file, rather than getting the resource from the server. Note that if ETags are not used, it is adviced that ETags are turned off in the webserver configuration file.[12]
+
+Again, it is doubtful that the preformance is affected in this juncture, as the size of the application and expected traffic are limited. In the current state, however, all resources are requested from the server, returned with a 200 if the resource could be found and then parsed, instead of returning a header which tells the user to utilize the cached resources.
 
 ###References
 
@@ -52,3 +58,5 @@ As of now, the application is not extensive, nor will it be burdened with extens
 [10] [4] S. Souders, “High Preformance Websites”,Communications of the AMC, . vol,2008, Vol. 51 Issue 12, p.39,December 2008. [Online] Available: [OneSearch] (http://eds.b.ebscohost.com.proxy.lnu.se/eds/detail/detail?vid=4&sid=57778c72-0d7c-4867-9509-d6effdd1f1bb%40sessionmgr114&hid=108&bdata=Jmxhbmc9c3Ymc2l0ZT1lZHMtbGl2ZSZzY29wZT1zaXRl#AN=35609277&db=buh) [Downloaded: 3 december, 2015].
 
 [11] “Best Practices for Speeding Up Your Web Site" Yahoo Developer Network [Online] Available: [Yahoo Developer Network](https://developer.yahoo.com/performance/rules.html#num_http=)  [Downloaded: 3 December, 2015]
+
+[12] S. Souders, “High Preformance Websites”,Communications of the AMC, . vol,2008, Vol. 51 Issue 12, p.37-39,December 2008. [Online] Available: [OneSearch] (http://eds.b.ebscohost.com.proxy.lnu.se/eds/detail/detail?vid=4&sid=57778c72-0d7c-4867-9509-d6effdd1f1bb%40sessionmgr114&hid=108&bdata=Jmxhbmc9c3Ymc2l0ZT1lZHMtbGl2ZSZzY29wZT1zaXRl#AN=35609277&db=buh) [Downloaded: 3 december, 2015].
