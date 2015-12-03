@@ -25,9 +25,8 @@ While on the topic of reducing file size, it is also recommended by Souders to G
 
 
 #Decreasing Response time with CDN
-As of now, the application is not extensive, nor will it be burdened with extensive traffic, as it is intended only for internal use, within the company. However, to reduce the load time further one can also use a Content Delivery System (CDN), which means a collection of servers at different location that enable a more efficient delivery of content, based on proximity and response time.[11]
+As of now, the application is not extensive, nor will it be burdened with extensive traffic, as it is intended only for internal use, within the company. However, to reduce the load time further one can also use a Content Delivery System (CDN), which means a collection of servers at different location that enable a more efficient delivery of content, based on proximity and response time. Yahoo recomend CDN services provied by companies such as Akamai Technologies, EdgeCast or level3 for cost efficiency[11]. As of now, on its current state, the cost would probably be to great, and bring very little value. The knowlage of how to optimize a site for improved response time when dealing with greater scale, can still be most valuble though.
 
-Some large Internet companies own their own CDN, but it's cost-effective to use a CDN service provider, such as Akamai Technologies, EdgeCast, or level3. For start-up companies and private web sites, the cost of a CDN service can be prohibitive, but as your target audience grows larger and becomes more global, a CDN is necessary to achieve fast response times. At Yahoo!, properties that moved static content off their application web servers to a CDN (both 3rd party as mentioned above as well as Yahoo’s own CDN) improved end-user response times by 20% or more. Switching to a CDN is a relatively easy code change that will dramatically improve the speed of your web site.
 
 Rule 1: make fewer HTTP Requests, Rule 4: Gzip Components, Rule 5: Put Stylesheets at the Top, Rule 6: Put Scripts at the Bottom, Rule 7: Avoid CSS Expressions, Rule 8: Make JavaScript and CSS External, Rule 10: Minify JavaScript
 
