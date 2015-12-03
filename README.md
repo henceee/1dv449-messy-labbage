@@ -41,4 +41,5 @@ Rule 1: make fewer HTTP Requests, Rule 4: Gzip Components, Rule 5: Put Styleshee
 
 [8] [4] S. Souders, “High Preformance Websites”,Communications of the AMC, . vol,2008, Vol. 51 Issue 12, p.39,December 2008. [Online] Available: [OneSearch] (http://eds.b.ebscohost.com.proxy.lnu.se/eds/detail/detail?vid=4&sid=57778c72-0d7c-4867-9509-d6effdd1f1bb%40sessionmgr114&hid=108&bdata=Jmxhbmc9c3Ymc2l0ZT1lZHMtbGl2ZSZzY29wZT1zaXRl#AN=35609277&db=buh) [Downloaded: 3 december, 2015].
 [9] “The GZip HomePage” 2003.[Online] Available:  [GZIP.org](http://www.gzip.org/) [Downloaded: 3 december, 2015].
+
 [10] [4] S. Souders, “High Preformance Websites”,Communications of the AMC, . vol,2008, Vol. 51 Issue 12, p.39,December 2008. [Online] Available: [OneSearch] (http://eds.b.ebscohost.com.proxy.lnu.se/eds/detail/detail?vid=4&sid=57778c72-0d7c-4867-9509-d6effdd1f1bb%40sessionmgr114&hid=108&bdata=Jmxhbmc9c3Ymc2l0ZT1lZHMtbGl2ZSZzY29wZT1zaXRl#AN=35609277&db=buh) [Downloaded: 3 december, 2015].
