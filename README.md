@@ -1,5 +1,7 @@
 # 1dv449-messy-labbage
+
 #Messy_Labbage Rapport
+
 ##Preformance and Optimization
 The key to faster sites and web applications is through Front End Optimization. In understanding what this entails, one must first gain an understanding of where the front end and back end are in a web service, or any technological system. For a web service, the front end is where the browser downloads and presents content to the user and the back-end is on the server-side of the service provider where the requests from the user are handled according to the definition provided by Technopedia [1].
 As much of the response time of a user request lies on the front-end, somewhere between 80-91%, according to estimates from Yahoo Developer Network[2] and Souders [3] respectively, one should reflect upon how the response time can be reduced. 
@@ -20,6 +22,12 @@ Although it might seem like a lot of things to think about, the solution is quit
 
 ##Compression with GZIP
 While on the topic of reducing file size, it is also recommended by Souders to GZIP components. So what is GZIP, you might ask? GZIP was developed by the GNU project, and standardized by RFC 1952. It is probably the most widespread compression format out there. For more information, visit the Gzip homepage [9]. GZIP further reduces the file size, thereby reducing the amount of data to be transferred over the network. It is recommended that text files are compressed, such as the HTML document, scripts, stylesheets, XML and JSON files.  By using the GZIP data size can be reduced with around 70 % [10]. 
+
+
+#Decreasing Response time with CDN
+As of now, the application is not extensive, nor will it be burdened with extensive traffic, as it is intended only for internal use, within the company. However, to reduce the load time further one can also use a Content Delivery System (CDN), which means a collection of servers at different location that enable a more efficient delivery of content, based on proximity and response time.[11]
+
+Some large Internet companies own their own CDN, but it's cost-effective to use a CDN service provider, such as Akamai Technologies, EdgeCast, or level3. For start-up companies and private web sites, the cost of a CDN service can be prohibitive, but as your target audience grows larger and becomes more global, a CDN is necessary to achieve fast response times. At Yahoo!, properties that moved static content off their application web servers to a CDN (both 3rd party as mentioned above as well as Yahoo’s own CDN) improved end-user response times by 20% or more. Switching to a CDN is a relatively easy code change that will dramatically improve the speed of your web site.
 
 Rule 1: make fewer HTTP Requests, Rule 4: Gzip Components, Rule 5: Put Stylesheets at the Top, Rule 6: Put Scripts at the Bottom, Rule 7: Avoid CSS Expressions, Rule 8: Make JavaScript and CSS External, Rule 10: Minify JavaScript
 
@@ -44,3 +52,5 @@ Rule 1: make fewer HTTP Requests, Rule 4: Gzip Components, Rule 5: Put Styleshee
 [9] “The GZip HomePage” 2003.[Online] Available:  [GZIP.org](http://www.gzip.org/) [Downloaded: 3 december, 2015].
 
 [10] [4] S. Souders, “High Preformance Websites”,Communications of the AMC, . vol,2008, Vol. 51 Issue 12, p.39,December 2008. [Online] Available: [OneSearch] (http://eds.b.ebscohost.com.proxy.lnu.se/eds/detail/detail?vid=4&sid=57778c72-0d7c-4867-9509-d6effdd1f1bb%40sessionmgr114&hid=108&bdata=Jmxhbmc9c3Ymc2l0ZT1lZHMtbGl2ZSZzY29wZT1zaXRl#AN=35609277&db=buh) [Downloaded: 3 december, 2015].
+
+[11] “Best Practices for Speeding Up Your Web Site" Yahoo Developer Network [Online] Available: [Yahoo Developer Network](https://developer.yahoo.com/performance/rules.html#num_http=)  [Downloaded: 3 December, 2015]
