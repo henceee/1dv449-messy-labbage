@@ -126,6 +126,6 @@ When logged out, one can access the /messages page again by returning to that UR
 
 [15]"Cross-Site Request Forgery (CSRF)", 2015. [Online] Available [owasp.org](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))
 
-[16]"",2015 [Online] Available [owasp.org](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
+[16]"XSS (Cross Site Scripting) Prevention Cheat Sheet",2015 [Online] Available [owasp.org](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
 
 [17]"Cross-Site Request Forgery (CSRF)", 2015. [Online] Available [owasp.org](https://www.owasp.org/index.php/CSRF_Prevention_Cheat_Sheet)
