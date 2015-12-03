@@ -63,11 +63,36 @@ By preparing statements,the values are seperated from the structure of the SQL. 
 Furthermore, randomization of common SQL keywords are proposed as an technique to reneder injections harmless, as the injected statement would be syntaxally incorrect, as well as proxy filters. Proxys are however prone to human error, according to  Balasundram and Ramaraj [14]. Personally, I would argue that the two first methods should suffice to increase the sequrity signigically.
 
 
-##HTML Injection
+##HTML Injection, XSS and CSRF
+
 ###Problem and description
 
+A Cross-Site-Request (CSRF or XSRF) attack is when a malicious site, such as a messaging application  as well as email, blog or program causes the browser to behave in a way which the user did not intend, while authenticated to that trusted site.This could, in worst case scenarious cause stolen bank information, money transfers or purchases in that person's name.[15]
 
-###Solution
+So what happens when data is not properly validated, leaving your site open to Cross Site Scripting (XSS) and XSRF attacks? This allows malicious users to inject HTML and script tags to the document? Imagine for a moment, a vicious hacker in search for exploits to gain acess of your login data. If that user can manipulate the web application to redirect you to another site, in order to hijack your session, before redirecting you to advertised location. The hacker has now sucessfully gained access to your login information.
+
+This may not lead to extreme cases on this perticular site, however imagine if there was some additonal data, which could be used to gain acess to other valuble information. If you are really unlucky, the hacker has already changed the password, used the provided email and by simply guessing the password unlocked your google, facebook and pretty much anything he or she so wishes from there anyway. This just goes to show the importance of having atleast a few different password.
+
+###Evaluation and Solution
+Although I was unable to get any Javascript to be actually be executed, which is indeed a good thing, there are several security issues that I feel I am obligated to atleast adress the potential threats regarding the Messy_Labbage site.
+
+7 rules are described to avoid Cross Site Scripting on the OWASP wiki page [16]. The first of which is to HTML escape before inserting data into the HMTL content, which is clearly not done, as I could enject properly rendered HTML. If the data was properly escaped, the literal characters would be shown, but not rendered as HTML. I have therefore drawn the conclution that my attempt att XSS injection is not the result of proper validation, but rather poor hacking skills.
+
+It is to be noted, however that rule 3.1 of aforementioned XSS checklist is properly implemented, as the Content Type is set to application/JSON with UTF-8 charset, rather than text, which leaves it less vulnerable to XSS attacks.
+
+There is not, however any Synchronizer Token Pattern to be found on the site, which is the general recomendation made by OWASP[17] to prevent XSRF attacks. There are of course other methods, but none as effective.
+
+##Other Security Issues /Bugs
+
+##Deleting Messages through faked POST
+This does not in any way pose a serious security threat in my eyes, although it is an action which any user should not be able to do. However, by simulating a POST via the Chrome Extension POSTMAN, one can by simply examining the sourcecode and extracting the ID of a message delete that message by doing a POST to /message/delete.
+
+##Getting the raw JSON information by GET to /message/data
+Again, this is in no way a serious threat to the users, as it simply presents the raw JSON data instead of the HTML formatted data representing a message. If this were to be some other, more sensitive data, however, it would be ill-advised to use XHR to get and POST to urls in such a way.
+
+##Broken Session For Logout
+When logged out, one can access the /messages page again by returning to that URL. One cannot, however, post comments. 
+
 
 ###References
 
@@ -98,3 +123,9 @@ Furthermore, randomization of common SQL keywords are proposed as an technique t
 [13] I.Balasundram, E.Ramaraj, "Prevention of SQL Injection Attacks by Using Service Oriented Authentication Technique",International Journal of Modeling and Optimization June 2013, vol.3, no.3, pp. 302-3. ISSN: 2010-3697 (print), Publisher: IACSIT Press Country of Publication: Singapore [Online] Available: [OneSearch](http://www.ijmo.org/papers/286-S385.pdf)
 
 [14] I.Balasundram, E.Ramaraj, "Prevention of SQL Injection Attacks by Using Service Oriented Authentication Technique",International Journal of Modeling and Optimization June 2013, vol.3, no.3, pp. 303. ISSN: 2010-3697 (print), Publisher: IACSIT Press Country of Publication: Singapore [Online] Available: [OneSearch](http://www.ijmo.org/papers/286-S385.pdf)
+
+[15]"Cross-Site Request Forgery (CSRF)", 2015. [Online] Available [owasp.org](https://www.owasp.org/index.php/Cross-Site_Request_Forgery_(CSRF))
+
+[16]"",2015 [Online] Available [owasp.org](https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet)
+
+[17]"Cross-Site Request Forgery (CSRF)", 2015. [Online] Available [owasp.org](https://www.owasp.org/index.php/CSRF_Prevention_Cheat_Sheet)
