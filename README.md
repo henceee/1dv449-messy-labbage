@@ -24,11 +24,10 @@ Although it might seem like a lot of things to think about, the solution is quit
 While on the topic of reducing file size, it is also recommended by Souders to GZIP components. So what is GZIP, you might ask? GZIP was developed by the GNU project, and standardized by RFC 1952. It is probably the most widespread compression format out there. For more information, visit the Gzip homepage [9]. GZIP further reduces the file size, thereby reducing the amount of data to be transferred over the network. It is recommended that text files are compressed, such as the HTML document, scripts, stylesheets, XML and JSON files.  By using the GZIP data size can be reduced with around 70 % [10]. 
 
 
-#Decreasing Response time with CDN
+##Decreasing Response time with CDN
 As of now, the application is not extensive, nor will it be burdened with extensive traffic, as it is intended only for internal use, within the company. However, to reduce the load time further one can also use a Content Delivery System (CDN), which means a collection of servers at different location that enable a more efficient delivery of content, based on proximity and response time. Yahoo recomend CDN services provied by companies such as Akamai Technologies, EdgeCast or level3 for cost efficiency[11]. As of now, on its current state, the cost would probably be to great, and bring very little value. The knowlage of how to optimize a site for improved response time when dealing with greater scale, can still be most valuble though.
 
 
-Rule 1: make fewer HTTP Requests, Rule 4: Gzip Components, Rule 5: Put Stylesheets at the Top, Rule 6: Put Scripts at the Bottom, Rule 7: Avoid CSS Expressions, Rule 8: Make JavaScript and CSS External, Rule 10: Minify JavaScript
 
 ###References
 
