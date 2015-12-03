@@ -23,7 +23,7 @@ While on the topic of reducing file size, it is also recommended by Souders to G
 
 Rule 1: make fewer HTTP Requests, Rule 4: Gzip Components, Rule 5: Put Stylesheets at the Top, Rule 6: Put Scripts at the Bottom, Rule 7: Avoid CSS Expressions, Rule 8: Make JavaScript and CSS External, Rule 10: Minify JavaScript
 
-
+###References
 
  [1] “Front-End Optimization (FEO)”, Techopedia, 2015 [Online] Available: [Technopedia] (https://www.techopedia.com/definition/1515/front-end-optimization-feo [Downloaded: 3 December, 2015].)
  
@@ -40,6 +40,7 @@ Rule 1: make fewer HTTP Requests, Rule 4: Gzip Components, Rule 5: Put Styleshee
 [7] [4] S. Souders, “High Preformance Websites”,Communications of the AMC, . vol,2008, Vol. 51 Issue 12, p.39,December 2008. [Online] Available: [OneSearch] (http://eds.b.ebscohost.com.proxy.lnu.se/eds/detail/detail?vid=4&sid=57778c72-0d7c-4867-9509-d6effdd1f1bb%40sessionmgr114&hid=108&bdata=Jmxhbmc9c3Ymc2l0ZT1lZHMtbGl2ZSZzY29wZT1zaXRl#AN=35609277&db=buh) [Downloaded: 3 december, 2015].
 
 [8] [4] S. Souders, “High Preformance Websites”,Communications of the AMC, . vol,2008, Vol. 51 Issue 12, p.39,December 2008. [Online] Available: [OneSearch] (http://eds.b.ebscohost.com.proxy.lnu.se/eds/detail/detail?vid=4&sid=57778c72-0d7c-4867-9509-d6effdd1f1bb%40sessionmgr114&hid=108&bdata=Jmxhbmc9c3Ymc2l0ZT1lZHMtbGl2ZSZzY29wZT1zaXRl#AN=35609277&db=buh) [Downloaded: 3 december, 2015].
+
 [9] “The GZip HomePage” 2003.[Online] Available:  [GZIP.org](http://www.gzip.org/) [Downloaded: 3 december, 2015].
 
 [10] [4] S. Souders, “High Preformance Websites”,Communications of the AMC, . vol,2008, Vol. 51 Issue 12, p.39,December 2008. [Online] Available: [OneSearch] (http://eds.b.ebscohost.com.proxy.lnu.se/eds/detail/detail?vid=4&sid=57778c72-0d7c-4867-9509-d6effdd1f1bb%40sessionmgr114&hid=108&bdata=Jmxhbmc9c3Ymc2l0ZT1lZHMtbGl2ZSZzY29wZT1zaXRl#AN=35609277&db=buh) [Downloaded: 3 december, 2015].
