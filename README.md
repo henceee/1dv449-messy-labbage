@@ -9,6 +9,7 @@ As much of the response time of a user request lies on the front-end, somewhere 
 ###Javascript and Stylesheets
 To minimize the number of HTTP request without affecting the content of the page, one can combine multiple scripts into a single script and combine multiple style sheets into one, as well as using so called sprites to minimize the number of background images for the CSS [4].
 
+####Problems and description
 In its current state, the site contains 5 external JavaScript files and 4 external stylesheets, which results in just as many requests – one for each resource. The site also contains one JavaScript script, and one CSS style inlined in the HTML document. In order to increase load-time, one should always make CSS and JavaScript external, rather than entwined in the HTML document, as these external files are cached by the browser [5].
 
 When the browser parses HTML, the Document Object Model (DOM) is created parallel to the CSSOM, which is constructed from the rules specified in the stylesheet. Together they comprise the render tree, which enables the browser to render content to the user. 
@@ -18,6 +19,8 @@ Seemingly complex browser architecture aside, what is important is that scripts 
 On a brighter note, CSS expressions are not used, in accordance to Souders’ 7th rule. CSS expressions are ill advised, since these expressions are based on the execution of JavaScript code embedded within the stylesheet, and are evaluated quite frequently, and reduce the load-time [7].
 
 However, only 3 out of 5 scripts used in the application are minified. Souders recommends that JavaScript files are compressed to reduce the size of the file, by minification, which means stripping unnecessary characters such as tabs, new lines, white space and so on. By doing this, the size of the file can be reduced with around 20% [8]. 
+
+###Solution
 Although it might seem like a lot of things to think about, the solution is quite easy. Simply get rid of the inline CSS and put all the CSS in a combined stylesheet, and link it in the pages header. Accordingly, the inline script should be removed as well, and put with the rest of the scripts in a combined script file. The script file should then be minimized, in order to reduce the size of the file. 
 
 ###Compression with GZIP
