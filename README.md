@@ -6,7 +6,7 @@
 The key to faster sites and web applications is through Front End Optimization. In understanding what this entails, one must first gain an understanding of where the front end and back end are in a web service, or any technological system. For a web service, the front end is where the browser downloads and presents content to the user and the back-end is on the server-side of the service provider where the requests from the user are handled according to the definition provided by Technopedia [1].
 As much of the response time of a user request lies on the front-end, somewhere between 80-91%, according to estimates from Yahoo Developer Network[2] and Souders [3] respectively, one should reflect upon how the response time can be reduced. 
 
-##Javascript and Stylesheets
+###Javascript and Stylesheets
 To minimize the number of HTTP request without affecting the content of the page, one can combine multiple scripts into a single script and combine multiple style sheets into one, as well as using so called sprites to minimize the number of background images for the CSS [4].
 
 In its current state, the site contains 5 external JavaScript files and 4 external stylesheets, which results in just as many requests – one for each resource. The site also contains one JavaScript script, and one CSS style inlined in the HTML document. In order to increase load-time, one should always make CSS and JavaScript external, rather than entwined in the HTML document, as these external files are cached by the browser [5].
@@ -20,11 +20,11 @@ On a brighter note, CSS expressions are not used, in accordance to Souders’ 7t
 However, only 3 out of 5 scripts used in the application are minified. Souders recommends that JavaScript files are compressed to reduce the size of the file, by minification, which means stripping unnecessary characters such as tabs, new lines, white space and so on. By doing this, the size of the file can be reduced with around 20% [8]. 
 Although it might seem like a lot of things to think about, the solution is quite easy. Simply get rid of the inline CSS and put all the CSS in a combined stylesheet, and link it in the pages header. Accordingly, the inline script should be removed as well, and put with the rest of the scripts in a combined script file. The script file should then be minimized, in order to reduce the size of the file. 
 
-##Compression with GZIP
+###Compression with GZIP
 While on the topic of reducing file size, it is also recommended by Souders to GZIP components. So what is GZIP, you might ask? GZIP was developed by the GNU project, and standardized by RFC 1952. It is probably the most widespread compression format out there. For more information, visit the Gzip homepage [9]. GZIP further reduces the file size, thereby reducing the amount of data to be transferred over the network. It is recommended that text files are compressed, such as the HTML document, scripts, stylesheets, XML and JSON files.  By using the GZIP data size can be reduced with around 70 % [10]. 
 
 
-##Decreasing Response time with CDN
+###Decreasing Response time with CDN
 As of now, the application is not extensive, nor will it be burdened with extensive traffic, as it is intended only for internal use, within the company. However, to reduce the load time further one can also use a Content Delivery System (CDN), which means a collection of servers at different location that enable a more efficient delivery of content, based on proximity and response time. Yahoo recomend CDN services provied by companies such as Akamai Technologies, EdgeCast or level3 for cost efficiency[11]. As of now, on its current state, the cost would probably be to great, and bring very little value. The knowlage of how to optimize a site for improved response time when dealing with greater scale, can still be most valuble though.
 
 
