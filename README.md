@@ -20,7 +20,7 @@ On a brighter note, CSS expressions are not used, in accordance to Souders’ 7t
 
 However, only 3 out of 5 scripts used in the application are minified. Souders recommends that JavaScript files are compressed to reduce the size of the file, by minification, which means stripping unnecessary characters such as tabs, new lines, white space and so on. By doing this, the size of the file can be reduced with around 20% [8]. 
 
-###Solution
+####Solution
 Although it might seem like a lot of things to think about, the solution is quite easy. Simply get rid of the inline CSS and put all the CSS in a combined stylesheet, and link it in the pages header. Accordingly, the inline script should be removed as well, and put with the rest of the scripts in a combined script file. The script file should then be minimized, in order to reduce the size of the file. 
 
 ###Compression with GZIP
@@ -37,6 +37,30 @@ In order to make sure that the same content is not requested again and again, fo
 One can also utilize Entity Tags, or ETags, to ensure that the cached version of a resource is valid, and corresponds with the resource located on the server. If the versions match, the server sends a 304 code back, meaning 'Not Modified', telling the server to use the cached file, rather than getting the resource from the server. Note that if ETags are not used, it is adviced that ETags are turned off in the webserver configuration file.[12]
 
 Again, it is doubtful that the preformance is affected in this juncture, as the size of the application and expected traffic are limited. In the current state, however, all resources are requested from the server, returned with a 200 if the resource could be found and then parsed, instead of returning a header which tells the user to utilize the cached resources.
+
+##Security
+
+##SQL Injection
+###Problem and description
+An SQLIA, or an SQL Injection attack is a malicious user attempts to take advantage of vulnerabilities in a web application. This can be done, for example by
+
+
+"In SQL injection attack, an attacker attempts
+to exploit vulnerabilities in custom Web applications by
+entering SQL code in an entry field such as a login. If
+successful, such an attack can give the attacker access to data
+on the database used by the application and the ability to run
+malicious code on the Web site. Malicious attacks occur
+when developers combine hard-coded strings with user
+provided input to create dynamic queries"
+
+I.Balasundram, E.Ramaraj, "Prevention of SQL Injection Attacks by Using Service Oriented Authentication Technique",International Journal of Modeling and Optimization June 2013, vol.3, no.3, pp. 302-6. ISSN: 2010-3697 (print), Publisher: IACSIT Press Country of Publication: Singapore [Online] Available: [OneSearch](http://www.ijmo.org/papers/286-S385.pdf)
+
+###Solution
+
+##
+###Problem and description
+###Solution
 
 ###References
 
