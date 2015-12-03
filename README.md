@@ -8,8 +8,10 @@ As much of the response time of a user request lies on the front-end, somewhere 
 To minimize the number of HTTP request without affecting the content of the page, one can combine multiple scripts into a single script and combine multiple style sheets into one, as well as using so called sprites to minimize the number of background images for the CSS [4].
 
 In its current state, the site contains 5 external JavaScript files and 4 external stylesheets, which results in just as many requests – one for each resource. The site also contains one JavaScript script, and one CSS style inlined in the HTML document. In order to increase load-time, one should always make CSS and JavaScript external, rather than entwined in the HTML document, as these external files are cached by the browser [5].
+
 When the browser parses HTML, the Document Object Model (DOM) is created parallel to the CSSOM, which is constructed from the rules specified in the stylesheet. Together they comprise the render tree, which enables the browser to render content to the user. 
 In constructing the DOM and CSSOM objects, the DOM must await the execution of JavaScript, which is reliant upon the CSSOM object. This intertwined relationship can create load-time issues, especially if the stylesheet(s) are not included in the top of the page, and the script file(s) are not included in the bottom[6].
+
 Seemingly complex browser architecture aside, what is important is that scripts and stylesheets are loaded externally, by putting them in a text file, and including the CSS in the header and the JavaScript at the very bottom of the body tag. It is therefore problematic that 4 scripts are currently found in the head of the page, mixed in with the stylesheets.
 On a brighter note, CSS expressions are not used, in accordance to Souders’ 7th rule. CSS expressions are ill advised, since these expressions are based on the execution of JavaScript code embedded within the stylesheet, and are evaluated quite frequently, and reduce the load-time [7].
 
